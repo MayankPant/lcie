@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lcie"
+version = "0.1.0"
+description = "Local Code Intelligence Engine"
+requires-python = ">=3.11"
+dependencies = [
+  "typer>=0.24",
+  "rich>=15.0"
+]
+
+[project.scripts]
+lcie = "lcie.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

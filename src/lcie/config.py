@@ -1,0 +1,3 @@
+CHUNK_SIZE = 40
+EMBED_MODEL = "all-MiniLM-L6-v2"
+TOP_K = 8
