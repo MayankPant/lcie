@@ -1,6 +1,5 @@
 from pathlib import Path
 
-
 EXTENSIONS = [".py", ".js", ".ts", ".go", ".rs", ".jave"]
 
 def scan_repo(path):

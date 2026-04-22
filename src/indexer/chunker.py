@@ -1,4 +1,6 @@
-def chunk_file(path, chunk_size=40):
+from lcie.config import CHUNK_SIZE
+
+def chunk_file(path, chunk_size=CHUNK_SIZE):
     with open(path, "r", errors="ignore") as f:
         lines = f.readlines()
         
