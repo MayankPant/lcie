@@ -1,10 +1,10 @@
 from lcie.config import CHUNK_SIZE
-
-def chunk_file(path, chunk_size=CHUNK_SIZE):
-    with open(path, "r", errors="ignore") as f:
+from pathlib import Path
+def chunk_file(filepath: Path, chunk_size: int=CHUNK_SIZE) -> list[str]:
+    with open(filepath, "r", errors="ignore") as f:
         lines = f.readlines()
         
-        chunks = []
+        chunks: list[str] = []
         
         for i in range(0, len(lines), chunk_size):
             chunk = "".join(lines[i: i + chunk_size])
